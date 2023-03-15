@@ -60,9 +60,10 @@ export default function ArticleCard(props){
       `;
 
     let ArticleImage = styled.div`
-    padding: 0.7em;
         flex: 0.5;
         height: 100%;
+        margin: auto;
+        padding: 0.7em;
       `;
 
       let Image = styled.img`
@@ -71,13 +72,14 @@ export default function ArticleCard(props){
         box-sizing: content-box;
         object-fit: cover;
         background-color: #d9d9d9;
+        display: block;
       `;
 
       let Title = styled.a`
         display: block;
-        margin-top:1.2em;
-        margin-left:0.7em;
-        font-size: 80px;
+        margin-top: 1.2em;
+        margin-left: 0.7em;
+        font-size: 40px;
         text-align: left;
         text-decoration: none;
         line-height: 1em;
@@ -88,15 +90,13 @@ export default function ArticleCard(props){
         }
       `;
 
-     let ByLine = styled.p`
+     let ByLine = styled.div`
         display: block;
-        margin-left:1.3em;
-        font-size: 50px;
-        font-weight: 500;
+        padding: 1em 0 1em 1em;
+        font-size: 30px;
         text-align: left;
         color: black;
         font-family: 'Pavanam', sans-serif;
-        white-space: pre-line;
         ${mediaQueries.mobile} {
           font-size: 12px;
         }

@@ -4,6 +4,7 @@ import styled from 'styled-components';
 import './App.css';
 import Header from './components/Header';
 import Footer from './components/Footer';
+import Grid from './components/ArticleGrid';
 
 function App() {
   const [ data, setData ] = useState(null);
@@ -17,13 +18,8 @@ function App() {
   return data && (
     <div className="App">
           <Header />
-          <ArticleCard 
-          article_image={data.article_image} 
-          article_title={data.article_title} 
-          article_url={data.article_url} 
-          article_byline={data.article_byline}
-          backgroundColor="yellow"
-          borderColor="orange" />
+          <Grid stories={data.womens_stories} bgColor="yellow" borderColor="orange"/>
+          <Grid stories={data.mens_stories} bgColor="blue" borderColor="blue"/>
           <Footer />
     </div>
   );
