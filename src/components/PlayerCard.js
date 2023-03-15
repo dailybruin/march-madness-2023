@@ -1,7 +1,8 @@
 import React from 'react';
 import styled from 'styled-components'
 import {mediaQueries} from '../shared/config';
-import WomenCard from '../images/wbb_new.svg'
+import WomenCard from '../images/wbb_new.svg';
+import MenCard from '../images/mbb_new.svg'
 import { HashLink } from "react-router-hash-link";
 
 /*
@@ -10,23 +11,68 @@ height: 50em;
 */
 export default function PlayerCard(props){
 
+    const OuterContainer = styled.div`
+        max-width: 100vw;
+        position: relative;
+        ${mediaQueries.mobile} {
+            margin-top: 3em;
+        }
+`;
+    
+    const Grid = styled.div`
+        width: 100vw;
+        margin: auto;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        /* column-gap: 1em; */
+        justify-items: center;
+        align-items: center;
+        ${mediaQueries.mobile} {
+            display: flex;
+            flex-direction: column;
+            width: 90vw;
+            margin: auto;
+            margin-top: 2em;
+            align-items: center;
+            row-gap: 1em;
+        }
+`;
+
     const Container = styled.div`
         display: flex;
         width: 100%;
-        height: 50em;
+        height: 70em;
         border-radius: 0.625em;
         font-family: 'Faster One', sans-serif;
         text-align: left;
         box-sizing: border-box;
         position: relative;
         background-image: url(${WomenCard});
+        background-repeat: no-repeat;
         ${mediaQueries.mobile} {
             background-image: url(${WomenCard});
             background-size: cover;
         }
     `
 
-    const Logo = styled.div`
+    const Container2 = styled.div`
+    display: flex;
+    width: 100%;
+    height: 70em;
+    border-radius: 0.625em;
+    font-family: 'Faster One', sans-serif;
+    text-align: left;
+    box-sizing: border-box;
+    position: relative;
+    background-image: url(${MenCard});
+    background-repeat: no-repeat;
+    ${mediaQueries.mobile} {
+        background-image: url(${MenCard});
+        background-size: cover;
+    }
+    `
+
+    const Logo1 = styled.div`
         position: absolute;
         width: 29px;
         height: 300px;
@@ -38,9 +84,26 @@ export default function PlayerCard(props){
         font-size: 30px;
         line-height: 39px;
         display: flex;
-        align-items: center:
+        align-items: center;
         text-align: center;
         color: rgba(152, 214, 242, 0.52);
+    `
+
+    const Logo2 = styled.div`
+    position: absolute;
+    width: 29px;
+    height: 300px;
+    left: 15.5em;
+    top: 200px;
+    font-family: 'Notable';
+    font-style: normal;
+    font-weight: bold;
+    font-size: 30px;
+    line-height: 39px;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    color: rgba(152, 214, 242, 0.52);
     `
 
     const ArticleInfo = styled.div`  
@@ -68,20 +131,38 @@ export default function PlayerCard(props){
     `
 
 
-    const Image = styled.img`
+    const Image1 = styled.img`
         display: block;
         position: absolute;
-        max-width: 100%;
+        max-width: 80%;
         max-height: 275px;
         margin: auto;
-        left: 170px;
-        top: 200px;
+        left: 10em;
+        right: 12em;
+        top: 15em;
         box-sizing: content-box;
         border-radius: 10px;
         ${mediaQueries.mobile} {
             height: 170px;
             margin: auto;
         }
+    `
+
+    const Image2 = styled.img`
+    display: block;
+    position: absolute;
+    max-width: 80%;
+    max-height: 275px;
+    margin: auto;
+    left: 7em;
+    right: 15em;
+    top: 15em;
+    box-sizing: content-box;
+    border-radius: 10px;
+    ${mediaQueries.mobile} {
+        height: 170px;
+        margin: auto;
+    }
     `
 
     /*const Link = styled.a`
@@ -104,20 +185,40 @@ export default function PlayerCard(props){
     `*/
 
     return (
-    <HashLink to="#women">
-        <Container>
-            <Image src={props.card_image}/>
-            <ArticleInfo>
-            </ArticleInfo>
-            <Logo>
-            B
-            R
-            U
-            I
-            N
-            S
-            </Logo>
-        </Container>
-    </HashLink>
+        <OuterContainer>
+            <Grid>
+            <Container>
+                <HashLink to="#women"> 
+                <Image1 src={props.card_image_wbb}/>
+                <ArticleInfo>
+                </ArticleInfo>
+                <Logo1>
+                B
+                R
+                U
+                I
+                N
+                S
+                </Logo1>
+                </HashLink>
+            </Container>
+
+            <Container2>
+                <HashLink to="#men"> 
+                <Image2 src={props.card_image_mbb}/>
+                <ArticleInfo>
+                </ArticleInfo>
+                <Logo2>
+                B
+                R
+                U
+                I
+                N
+                S
+                </Logo2>
+                </HashLink>
+            </Container2>
+            </Grid>
+        </OuterContainer>
     )
 }
