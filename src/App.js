@@ -3,6 +3,7 @@ import styled from 'styled-components';
 import './App.css';
 import Header from './components/Header';
 import Footer from './components/Footer';
+import Landing from './components/LandingImage'
 import Blurb from './components/DescriptionArea';
 import background from './images/background.svg'
 
@@ -27,6 +28,7 @@ function App() {
     <div className="App">
       <Container>
       <Header/>
+      <Landing landing_image = {data.landing_image} landing_image_static = {data.landing_image_static} landing_credits={data.landing_credits}/>
       <Blurb text={data.description_text}>
       </Blurb>
       <Footer/>
