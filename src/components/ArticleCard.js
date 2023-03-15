@@ -79,10 +79,10 @@ export default function ArticleCard(props){
         display: block;
         margin-top: 1.2em;
         margin-left: 0.7em;
-        font-size: 40px;
+        font-size: 25px;
         text-align: left;
         text-decoration: none;
-        line-height: 1em;
+        line-height: 1.2em;
         color: black;
         font-family: 'Sawarabi Mincho', serif;
         ${mediaQueries.mobile} {
@@ -92,8 +92,10 @@ export default function ArticleCard(props){
 
      let ByLine = styled.div`
         display: block;
-        padding: 1em 0 1em 1em;
-        font-size: 30px;
+        margin-top: 1.2em;
+        margin-left: 0.7em;
+        margin-bottom: 1em;
+        font-size: 25px;
         text-align: left;
         color: black;
         font-family: 'Pavanam', sans-serif;
