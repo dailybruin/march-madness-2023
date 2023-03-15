@@ -5,6 +5,8 @@ import Header from './components/Header';
 import Footer from './components/Footer';
 import Landing from './components/LandingImage'
 import Blurb from './components/DescriptionArea';
+import Grid from './components/ArticleGrid';
+import ArticleCard from './components/ArticleCard';
 import background from './images/background.svg'
 
 function App() {
@@ -27,11 +29,12 @@ function App() {
   return data && (
     <div className="App">
       <Container>
-      <Header/>
-      <Landing landing_image = {data.landing_image} landing_image_static = {data.landing_image_static} landing_credits={data.landing_credits}/>
-      <Blurb text={data.description_text}>
-      </Blurb>
-      <Footer/>
+        <Header />
+        <Landing landing_image = {data.landing_image} landing_image_static = {data.landing_image_static} landing_credits={data.landing_credits}/>
+        <Blurb text={data.description_text}/>
+        <Grid stories={data.womens_stories} bgColor="yellow" borderColor="orange"/>
+        <Grid stories={data.mens_stories} bgColor="blue" borderColor="blue"/>
+        <Footer/>
       </Container>
     </div>
   );
