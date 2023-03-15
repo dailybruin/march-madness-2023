@@ -5,7 +5,7 @@ import { colors } from '../shared/config'
 const DBHeader = styled("div")`
   z-index: 2001;
 
-  position: fixed;
+  position: sticky;
   top: 0;
   background: #023047;
   width: 100%;

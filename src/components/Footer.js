@@ -16,6 +16,7 @@ const Container = styled.div`
 	h1 {
 		margin: 0;
 		font-family: 'Times New Roman', Times, serif;
+    font-weight: 500;
     font-size: 30px;
 	}
   /* margin-bottom: 20px; */
@@ -25,7 +26,7 @@ const Socials = styled.div`
 position: relative;
 margin-top: 20px;
 
-font-family: 'Avenir';
+font-family: 'Montserrat', sans-serif;
 font-style: normal;
 font-weight: 500;
 font-size: 14px;
