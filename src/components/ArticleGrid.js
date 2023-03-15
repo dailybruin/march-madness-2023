@@ -6,6 +6,9 @@ const OuterContainer = styled.div`
     max-width: 100vw;
     margin-top: 5em;
     position: relative;
+    ${mediaQueries.mobile} {
+        margin-top: 3em;
+    }
 `;
 
 const Grid = styled.div`
