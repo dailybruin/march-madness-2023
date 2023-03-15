@@ -9,7 +9,7 @@ const Credits = styled.div`
   margin-right: 10px;
   padding-top: 0.5em;
   font-size: 18px;
-  font-family: Sofia Sans;
+  font-family: 'Pontano Sans', sans-serif;
   ${mediaQueries.mobile} {
     font-size: 14px;
   }

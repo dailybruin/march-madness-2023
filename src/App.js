@@ -3,6 +3,7 @@ import styled from 'styled-components';
 import './App.css';
 import Header from './components/Header';
 import Footer from './components/Footer';
+import Landing from './components/LandingImage'
 
 function App() {
   const [ data, setData ] = useState(null);
@@ -16,7 +17,7 @@ function App() {
   return data && (
     <div className="App">
       <Header/>
-      Hello Daily Bruin!
+      <Landing landing_image = {data.landing_image} landing_image_static = {data.landing_image_static} landing_credits={data.landing_credits}/>
       <Footer/>
     </div>
   );
