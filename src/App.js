@@ -27,8 +27,7 @@ function App() {
     <div className="App">
       <Container>
       <Header/>
-      Hello Daily Bruin!
-      <Blurb>
+      <Blurb text={data.description_text}>
       </Blurb>
       <Footer/>
       </Container>

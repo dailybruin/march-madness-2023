@@ -19,7 +19,7 @@ const Textbox = styled.div`
     text-align: center;
     padding: 2em;
     margin: 3em auto 2em auto;
-    font-family: 'Pontano Sans';
+    font-family: 'Pontano Sans', sans-serif;
     font-style: normal;
     font-weight: 400;
     font-size: 30px;
@@ -30,11 +30,11 @@ const Textbox = styled.div`
     }
 `
 
-export default function DescriptionText({description_text}) {
+export default function DescriptionText(props) {
     return (
         <Container>
             <Textbox>
-                {description_text}
+                {props.text}
             </Textbox>
         </Container>
     )

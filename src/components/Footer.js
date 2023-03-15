@@ -9,7 +9,6 @@ import { mediaQueries } from '../shared/config';
 
 
 const Container = styled.div`
-	
 	height: auto;
 	color: #023047;
 	padding: 60px 0 10px 0;
