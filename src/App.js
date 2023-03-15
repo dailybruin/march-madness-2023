@@ -3,6 +3,8 @@ import styled from 'styled-components';
 import './App.css';
 import Header from './components/Header';
 import Footer from './components/Footer';
+import Blurb from './components/DescriptionArea';
+import background from './images/background.svg'
 
 function App() {
   const [ data, setData ] = useState(null);
@@ -13,11 +15,22 @@ function App() {
 		.then(res => setData(res.data['article.aml']))
   }, [])
 
+  const Container = styled.div`
+  height: fit-content;
+  background-image: url(${background});
+  background-size: cover;
+  background-repeat: repeat;
+  /* overflow-y: scroll; */
+`;
+
   return data && (
     <div className="App">
+      <Container>
       <Header/>
-      Hello Daily Bruin!
+      <Blurb text={data.description_text}>
+      </Blurb>
       <Footer/>
+      </Container>
     </div>
   );
 }
