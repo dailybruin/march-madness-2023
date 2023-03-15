@@ -5,7 +5,7 @@ import { mediaQueries } from "../shared/config";
 
 const Credits = styled.div`
   float: right;
-  color: white;
+  color: #023047;
   margin-right: 10px;
   padding-top: 0.5em;
   font-size: 18px;
