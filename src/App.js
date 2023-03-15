@@ -19,15 +19,15 @@ const Men = styled.div`
   width: 100vw;
 `
 const Title = styled.div`
-  font-size: 40px;
-  line-height: 23px;
+  font-size: 50px;
   font-family: "Notable";
   text-align: left;
-  margin-left: 3em;
+  margin-left: 2em;
   margin-top: 3em;
   ${mediaQueries.mobile} {
       text-align: center;
-      font-size: 20px;
+      font-size: 30px;
+      line-height: 1.5em;
       margin-left: 0em;
   }
 `
