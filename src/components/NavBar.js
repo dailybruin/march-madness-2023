@@ -12,6 +12,10 @@ const Container = styled.div`
     z-index: 100;
     top: 0;
     background-color: rgb(193,230,248, 0.7);
+    ${mediaQueries.mobile} {
+      padding-top: 45px;
+      padding-bottom: 25px;
+    }
 `
 const InnerContainer = styled.div`
     display: inline-block;
@@ -22,6 +26,9 @@ const InnerContainer = styled.div`
     line-height: 23px;
     font-family: "Notable";
     color: #023047;
+    ${mediaQueries.mobile} {
+      font-size: 15px;
+    }
 `
 export default function NavBar(){
 

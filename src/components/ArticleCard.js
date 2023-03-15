@@ -100,7 +100,7 @@ export default function ArticleCard(props){
         color: black;
         font-family: 'Pavanam', sans-serif;
         ${mediaQueries.mobile} {
-          font-size: 12px;
+          font-size: 20px;
         }
       `;
     

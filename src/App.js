@@ -26,8 +26,9 @@ const Title = styled.div`
   margin-top: 3em;
   ${mediaQueries.mobile} {
       text-align: center;
-      font-size: 30px;
+      font-size: 22px;
       line-height: 1.5em;
+      margin-top: 5em;
       margin-left: 0em;
   }
 `
