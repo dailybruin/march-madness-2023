@@ -5,6 +5,11 @@ import Header from './components/Header';
 import Footer from './components/Footer';
 import NavBar from './components/NavBar';
 import { Route, Routes, BrowserRouter as Router } from "react-router-dom";
+import Landing from './components/LandingImage'
+import Blurb from './components/DescriptionArea';
+import Grid from './components/ArticleGrid';
+import ArticleCard from './components/ArticleCard';
+import background from './images/background.svg'
 
 const Women = styled.div`
   width: 100%;
@@ -36,17 +41,32 @@ function AppContent() {
 		.then(res => setData(res.data['article.aml']))
   }, [])
 
+  const Container = styled.div`
+  height: fit-content;
+  background-image: url(${background});
+  background-size: cover;
+  background-repeat: repeat;
+  /* overflow-y: scroll; */
+`;
+
   return data && (
     <div className="App">
-      <Header/>
-      <NavBar></NavBar>
-      <Women id="women">
-        Women's Basketball
-      </Women>
-      <Men id="men">
-        Men's Basketball
-      </Men>
-      <Footer/>
+     
+      <Container>
+        <Header />
+        <NavBar></NavBar>
+        <Landing landing_image = {data.landing_image} landing_image_static = {data.landing_image_static} landing_credits={data.landing_credits}/>
+        <Blurb text={data.description_text}/>
+        <Women id="women">
+          Women's Basketball
+          <Grid stories={data.womens_stories} bgColor="yellow" borderColor="orange"/>
+        </Women>
+        <Men id="men">
+          Men's Basketball
+          <Grid stories={data.mens_stories} bgColor="blue" borderColor="blue"/>
+        </Men>
+        <Footer/>
+      </Container>
       
     </div>
   );
