@@ -31,7 +31,7 @@ const LandingImage = (props) => {
   const scroller = useCallback(() => {
     setTimeout(() => {
       if (gifEndRef && gifEndRef.current) {
-        gifEndRef.current.scrollIntoView({ behavior: "smooth" });
+        gifEndRef.current.scrollIntoView({behavior: "smooth" });
         setFirstTime(false);
       }
     }, 4000);

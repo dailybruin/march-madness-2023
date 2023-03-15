@@ -4,7 +4,7 @@ import { mediaQueries } from '../shared/config';
 
 
 const Container = styled.div `
-    width: 100vw;
+    /* width: 100vw; */
     height: fit-content;
     position: relative;
     display: flex;

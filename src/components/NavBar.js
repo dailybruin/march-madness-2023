@@ -2,14 +2,16 @@ import React from "react";
 import styled from "styled-components";
 import { mediaQueries } from "../shared/config";
 import { HashLink } from "react-router-hash-link";
-
+import{ useState, useEffect }from "react";
 
 const Container = styled.div`
     position: sticky;
-    top: 0;
     width: 100%;
     padding-top: 35px;
     padding-bottom: 35px;
+    z-index: 100;
+    top: 0;
+    background-color: rgb(193,230,248, 0.7);
 `
 const InnerContainer = styled.div`
     display: inline-block;
@@ -22,6 +24,7 @@ const InnerContainer = styled.div`
     color: #023047;
 `
 export default function NavBar(){
+
     return(
         <Container>
             <HashLink to="#women">

@@ -9,27 +9,27 @@ import Landing from './components/LandingImage'
 import Blurb from './components/DescriptionArea';
 import Grid from './components/ArticleGrid';
 import ArticleCard from './components/ArticleCard';
-import background from './images/background.svg'
+import background from './images/background.svg';
+import { mediaQueries } from './shared/config';
 
 const Women = styled.div`
-  width: 100%;
-  height: 500px;
-  background: blue;
-  font-size: 18px;
-  line-height: 23px;
-  font-family: "Notable";
-  padding: 50px;
-  text-align: left;
+  width: 100vw;
 `
 const Men = styled.div`
-  width: 100%;
-  height: 500px;
-  background: yellow;
-  font-size: 18px;
+  width: 100vw;
+`
+const Title = styled.div`
+  font-size: 40px;
   line-height: 23px;
   font-family: "Notable";
-  padding: 50px;
   text-align: left;
+  margin-left: 3em;
+  margin-top: 3em;
+  ${mediaQueries.mobile} {
+      text-align: center;
+      font-size: 20px;
+      margin-left: 0em;
+  }
 `
 
 function AppContent() {
@@ -54,15 +54,23 @@ function AppContent() {
      
       <Container>
         <Header />
-        <NavBar></NavBar>
         <Landing landing_image = {data.landing_image} landing_image_static = {data.landing_image_static} landing_credits={data.landing_credits}/>
+        <NavBar></NavBar>
         <Blurb text={data.description_text}/>
+        
         <Women id="women">
-          Women's Basketball
+          <br></br>
+          <Title>
+            Women's Basketball
+          </Title>
           <Grid stories={data.womens_stories} bgColor="yellow" borderColor="orange"/>
         </Women>
+
         <Men id="men">
-          Men's Basketball
+          <br></br>
+          <Title>
+            Men's Basketball
+          </Title>
           <Grid stories={data.mens_stories} bgColor="blue" borderColor="blue"/>
         </Men>
         <Footer/>
