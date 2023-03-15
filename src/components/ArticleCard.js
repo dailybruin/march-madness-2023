@@ -1,7 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 import { mediaQueries } from '../shared/config';
-
+import { HashLink } from "react-router-hash-link";
 
 export default function ArticleCard(props){
     function getBackground(backgroundColor){

@@ -57,7 +57,7 @@ function AppContent() {
         <Landing landing_image = {data.landing_image} landing_image_static = {data.landing_image_static} landing_credits={data.landing_credits}/>
         <NavBar></NavBar>
         <Blurb text={data.description_text}/>
-        
+
         <Women id="women">
           <br></br>
           <Title>

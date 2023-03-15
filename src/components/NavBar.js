@@ -7,7 +7,7 @@ import{ useState, useEffect }from "react";
 const Container = styled.div`
     position: sticky;
     width: 100%;
-    padding-top: 35px;
+    padding-top: 55px;
     padding-bottom: 35px;
     z-index: 100;
     top: 0;
