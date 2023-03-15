@@ -11,6 +11,7 @@ import Grid from './components/ArticleGrid';
 import ArticleCard from './components/ArticleCard';
 import background from './images/background.svg';
 import { mediaQueries } from './shared/config';
+import WomenCard from './components/PlayerCard';
 
 const Women = styled.div`
   width: 100vw;
@@ -56,8 +57,12 @@ function AppContent() {
         <Header />
         <Landing landing_image = {data.landing_image} landing_image_static = {data.landing_image_static} landing_credits={data.landing_credits}/>
         <NavBar></NavBar>
+
+        <WomenCard card_image = {data.card_image_womens}></WomenCard>
+
         <Blurb text={data.description_text}/>
-        
+
+
         <Women id="women">
           <br></br>
           <Title>
