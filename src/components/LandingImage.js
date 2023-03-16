@@ -31,7 +31,7 @@ const LandingImage = (props) => {
         gifEndRef.current.scrollIntoView({behavior: "smooth" });
         setFirstTime(false);
       }
-    }, 1660);
+    }, 2000);
   }, [gifEndRef]);
 
   return (
