@@ -50,34 +50,33 @@ function AppContent() {
   /* overflow-y: scroll; */
 `;
 
+
   return data && (
     <div className="App">
      
       <Container>
-        <Header />
-        <Landing landing_image = {data.landing_image} landing_image_static = {data.landing_image_static} landing_credits={data.landing_credits}/>
-        <NavBar></NavBar>
+              <Header />
+              <Landing landing_image={data.landing_image} landing_image_static={data.landing_image_static} landing_credits={data.landing_credits} />
 
-        <WomenCard card_image = {data.card_image_womens}></WomenCard>
+              <NavBar></NavBar>
 
-        <Blurb text={data.description_text}/>
+              <WomenCard card_image={data.card_image_womens} card_image_mens={data.card_image_mens}></WomenCard>
+              <Blurb text={data.description_text} />
+              <Women id="women">
+                  <br></br>
+                  <Title>
+                      Women's Basketball
+                  </Title>
+                  <Grid stories={data.womens_stories} bgColor="yellow" borderColor="orange" />
+              </Women>
 
-
-        <Women id="women">
-          <br></br>
-          <Title>
-            Women's Basketball
-          </Title>
-          <Grid stories={data.womens_stories} bgColor="yellow" borderColor="orange"/>
-        </Women>
-
-        <Men id="men">
-          <br></br>
-          <Title>
-            Men's Basketball
-          </Title>
-          <Grid stories={data.mens_stories} bgColor="blue" borderColor="blue"/>
-        </Men>
+              <Men id="men">
+                  <br></br>
+                  <Title>
+                      Men's Basketball
+                  </Title>
+                  <Grid stories={data.mens_stories} bgColor="blue" borderColor="blue" />
+              </Men>
         <Footer/>
       </Container>
       
