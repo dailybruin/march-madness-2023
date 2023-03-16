@@ -2,7 +2,6 @@ import React, { useState, useRef, useCallback } from "react";
 import LandingGif from "./LandingGif";
 import styled from "styled-components";
 import { mediaQueries } from "../shared/config";
-import Gif from "../images/marchmadness.GIF";
 
 const Credits = styled.div`
   float: right;
@@ -31,7 +30,7 @@ const LandingImage = (props) => {
         gifEndRef.current.scrollIntoView({behavior: "smooth" });
         setFirstTime(false);
       }
-    }, 2000);
+    }, 3000);
   }, [gifEndRef]);
 
   return (

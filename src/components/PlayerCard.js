@@ -151,7 +151,7 @@ export default function PlayerCard(props){
         max-width: 80%;
         max-height: 275px;
         margin: auto;
-        left: 10em;
+        left: 12em;
         right: 12em;
         top: 15em;
         box-sizing: content-box;
@@ -172,7 +172,7 @@ export default function PlayerCard(props){
     max-width: 80%;
     max-height: 275px;
     margin: auto;
-    left: 7em;
+    left: 10em;
     right: 15em;
     top: 15em;
     box-sizing: content-box;
@@ -214,14 +214,14 @@ export default function PlayerCard(props){
                 <Image1 src={props.card_image_wbb}/>
                 <ArticleInfo>
                 </ArticleInfo>
-                <Logo1>
+                {/* <Logo1>
                 B
                 R
                 U
                 I
                 N
                 S
-                </Logo1>
+                </Logo1> */}
                 </HashLink>
             </Container>
 
@@ -230,14 +230,14 @@ export default function PlayerCard(props){
                 <Image2 src={props.card_image_mbb}/>
                 <ArticleInfo>
                 </ArticleInfo>
-                <Logo2>
+                {/* <Logo2>
                 B
                 R
                 U
                 I
                 N
                 S
-                </Logo2>
+                </Logo2> */}
                 </HashLink>
             </Container2>
             </Grid>
