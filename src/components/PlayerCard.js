@@ -14,27 +14,29 @@ export default function PlayerCard(props){
     const OuterContainer = styled.div`
         max-width: 100vw;
         position: relative;
+        margin-top: 4em;
         ${mediaQueries.mobile} {
-            margin-top: 3em;
+            margin-top: 4em;
         }
 `;
     
     const Grid = styled.div`
-        width: 100vw;
+        width: 95vw;
         margin: auto;
         display: grid;
         grid-template-columns: 1fr 1fr;
+        column-gap: 1em;
         /* column-gap: 1em; */
         justify-items: center;
         align-items: center;
         ${mediaQueries.mobile} {
             display: flex;
             flex-direction: column;
-            width: 90vw;
+            width: 70vw;
             margin: auto;
-            margin-top: 2em;
+            /* margin-top: 2em; */
             align-items: center;
-            row-gap: 1em;
+            row-gap: 0em;
         }
 `;
 
@@ -51,7 +53,8 @@ export default function PlayerCard(props){
         background-repeat: no-repeat;
         ${mediaQueries.mobile} {
             background-image: url(${WomenCard});
-            background-size: cover;
+            background-size: 100%;
+            height: 30em;
         }
     `
 
@@ -68,7 +71,8 @@ export default function PlayerCard(props){
     background-repeat: no-repeat;
     ${mediaQueries.mobile} {
         background-image: url(${MenCard});
-        background-size: cover;
+        background-size: 100%;
+        height: 30em;
     }
     `
 
@@ -87,23 +91,33 @@ export default function PlayerCard(props){
         align-items: center;
         text-align: center;
         color: rgba(152, 214, 242, 0.52);
+        ${mediaQueries.mobile} {
+            display: none;
+            height: 0;
+            width: 0;
+        }
     `
 
     const Logo2 = styled.div`
-    position: absolute;
-    width: 29px;
-    height: 300px;
-    left: 15.5em;
-    top: 200px;
-    font-family: 'Notable';
-    font-style: normal;
-    font-weight: bold;
-    font-size: 30px;
-    line-height: 39px;
-    display: flex;
-    align-items: center;
-    text-align: center;
-    color: rgba(152, 214, 242, 0.52);
+        position: absolute;
+        width: 29px;
+        height: 300px;
+        left: 15.5em;
+        top: 200px;
+        font-family: 'Notable';
+        font-style: normal;
+        font-weight: bold;
+        font-size: 30px;
+        line-height: 39px;
+        display: flex;
+        align-items: center;
+        text-align: center;
+        color: rgba(152, 214, 242, 0.52);
+        ${mediaQueries.mobile} {
+            display: none;
+            height: 0;
+            width: 0;
+        }
     `
 
     const ArticleInfo = styled.div`  
@@ -143,7 +157,11 @@ export default function PlayerCard(props){
         box-sizing: content-box;
         border-radius: 10px;
         ${mediaQueries.mobile} {
-            height: 170px;
+            position: absolute;
+            left: 4em;
+            top: 6em;
+            height: 130px;
+            width: 170px;
             margin: auto;
         }
     `
@@ -160,7 +178,11 @@ export default function PlayerCard(props){
     box-sizing: content-box;
     border-radius: 10px;
     ${mediaQueries.mobile} {
-        height: 170px;
+        position: absolute;
+        left: 4em;
+        top: 6em;
+        height: 130px;
+        width: 170px;
         margin: auto;
     }
     `

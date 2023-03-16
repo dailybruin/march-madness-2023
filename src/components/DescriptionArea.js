@@ -17,8 +17,8 @@ const Textbox = styled.div`
     position: relative;
     width: 80vw;
     text-align: center;
-    padding: 2em;
-    margin: 3em auto 2em auto;
+    padding: 0em;
+    margin: 0em auto 2em auto;
     font-family: 'Pontano Sans', sans-serif;
     font-style: normal;
     font-weight: 400;
@@ -27,6 +27,8 @@ const Textbox = styled.div`
     ${mediaQueries.mobile} {
         width: 60vw;
         font-size: 16px;
+        margin: 2em auto 2em auto;
+        padding-top: 2em;
     }
 `
 

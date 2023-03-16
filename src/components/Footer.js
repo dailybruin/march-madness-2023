@@ -41,7 +41,7 @@ color: #023047;
 	}
 	p {
     position: relative;
-		margin: 80px 20px;
+		margin: 80px 40px;
 		${mediaQueries.mobile} {
 			margin: 50px 20px;
 		}

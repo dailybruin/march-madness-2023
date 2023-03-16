@@ -2,6 +2,7 @@ import React, { useState, useRef, useCallback } from "react";
 import LandingGif from "./LandingGif";
 import styled from "styled-components";
 import { mediaQueries } from "../shared/config";
+import Gif from "../images/marchmadness.GIF";
 
 const Credits = styled.div`
   float: right;
@@ -20,10 +21,6 @@ const LandingImage = (props) => {
   let landingCredits = props.landing_credits;
   let landingStatic = props.landing_image_static;
 
-  let tempLanding =
-    "https://user-images.githubusercontent.com/36126914/154766367-2c3d9c80-3cdc-4790-b15c-7eba5eee9fd2.gif";
-
-  let tempCredits = "(Credits: Joe Bruin)";
 
   const gifEndRef = useRef(null);
   const [firstTime, setFirstTime] = useState(true);
@@ -34,7 +31,7 @@ const LandingImage = (props) => {
         gifEndRef.current.scrollIntoView({behavior: "smooth" });
         setFirstTime(false);
       }
-    }, 4000);
+    }, 1660);
   }, [gifEndRef]);
 
   return (
