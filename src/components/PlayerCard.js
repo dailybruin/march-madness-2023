@@ -27,8 +27,10 @@ export default function PlayerCard(props){
         grid-template-columns: 1fr 1fr;
         column-gap: 1em;
         /* column-gap: 1em; */
-        justify-items: center;
+        justify-content: center;
         align-items: center;
+        box-sizing: border-box;
+
         ${mediaQueries.mobile} {
             display: flex;
             flex-direction: column;
@@ -40,86 +42,69 @@ export default function PlayerCard(props){
         }
 `;
 
+
     const Container = styled.div`
         display: flex;
+        justify-content: center;
         width: 100%;
         height: 70em;
         border-radius: 0.625em;
         font-family: 'Faster One', sans-serif;
-        text-align: left;
         box-sizing: border-box;
         position: relative;
-        background-image: url(${WomenCard});
-        background-repeat: no-repeat;
+        /* background-image: url(${WomenCard}); */
+        /* background-repeat: no-repeat; */
+
         ${mediaQueries.mobile} {
             background-image: url(${WomenCard});
             background-size: 100%;
             height: 30em;
         }
+
+        img {
+            display: block;
+            text-align: center;
+            margin: auto;
+        }
     `
 
     const Container2 = styled.div`
-    display: flex;
-    width: 100%;
-    height: 70em;
-    border-radius: 0.625em;
-    font-family: 'Faster One', sans-serif;
-    text-align: left;
-    box-sizing: border-box;
-    position: relative;
-    margin-top: 1.2em;
-    background-image: url(${MenCard});
-    background-repeat: no-repeat;
-    ${mediaQueries.mobile} {
-        background-image: url(${MenCard});
-        background-size: 100%;
-        height: 30em;
-    }
-    `
-
-    const Logo1 = styled.div`
-        position: absolute;
-        width: 29px;
-        height: 300px;
-        left: 17.5em;
-        top: 200px;
-        font-family: 'Notable';
-        font-style: normal;
-        font-weight: bold;
-        font-size: 30px;
-        line-height: 39px;
         display: flex;
-        align-items: center;
-        text-align: center;
-        color: rgba(152, 214, 242, 0.52);
+        width: 100%;
+        height: 70em;
+        border-radius: 0.625em;
+        font-family: 'Faster One', sans-serif;
+        /* text-align: left; */
+        /* box-sizing: border-box; */
+        position: relative;
+        margin-top: 1.2em;
+        /* background-image: url(${MenCard}); */
+        /* background-repeat: no-repeat; */
+        justify-content: center;
+
         ${mediaQueries.mobile} {
-            display: none;
-            height: 0;
-            width: 0;
+            background-image: url(${MenCard});
+            background-size: 100%;
+            height: 30em;
+        }
+        
+        img {
+            display: block;
+            text-align: center;
+            margin: auto;
         }
     `
 
-    const Logo2 = styled.div`
-        position: absolute;
-        width: 29px;
-        height: 300px;
-        left: 15.5em;
-        top: 200px;
-        font-family: 'Notable';
-        font-style: normal;
-        font-weight: bold;
-        font-size: 30px;
-        line-height: 39px;
-        display: flex;
-        align-items: center;
-        text-align: center;
-        color: rgba(152, 214, 242, 0.52);
-        ${mediaQueries.mobile} {
-            display: none;
-            height: 0;
-            width: 0;
-        }
-    `
+    // const InnerContainer1 = styled.div`
+    //     background-image: url(${WomenCard});
+    //     background-repeat: no-repeat;
+    // `
+
+    // const InnerContainer2 = styled.div`
+    //     background-image: url(${MenCard});
+    //     background-repeat: no-repeat;
+    // `
+
 
     const ArticleInfo = styled.div`  
         display: none;
@@ -148,11 +133,11 @@ export default function PlayerCard(props){
 
     const Image1 = styled.img`
         display: block;
-        position: relative;
+        position: absolute;
         max-width: 90%;
         max-height: 280px;
         margin: auto;
-        left: 11em;
+        left: 12em;
         right: 15em;
         top: 15em;
         box-sizing: content-box;
@@ -169,7 +154,7 @@ export default function PlayerCard(props){
 
     const Image2 = styled.img`
     display: block;
-    position: relative;
+    position: absolute;
     max-width: 100%;
     max-height: 280px;
     margin: auto;
@@ -188,59 +173,28 @@ export default function PlayerCard(props){
     }
     `
 
-    /*const Link = styled.a`
-        
-        ${mediaQueries.mobile} {
-            height: 100%;
-            width: 100%;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-        }
-
-        max-width: 100%;
-        height: 245px;
-        <Title href={props.article_url}><Image src={props.card_image}/></Title>
-
-        <ArticleInfo>
-                <Title href={props.article_url}>{props.article_title}</Title>
-            </ArticleInfo>
-    `*/
 
     return (
         <OuterContainer>
             <Grid>
-            <Container>
-                <HashLink to="#women"> 
-                <Image1 src={props.card_image_wbb}/>
-                <ArticleInfo>
-                </ArticleInfo>
-                {/* <Logo1>
-                B
-                R
-                U
-                I
-                N
-                S
-                </Logo1> */}
-                </HashLink>
-            </Container>
-
+                <Container>
+                    <HashLink to="#women"> 
+                    <img src={WomenCard}/>
+                    <Image1 src={props.card_image_wbb}/>
+                    <ArticleInfo>
+                    </ArticleInfo>
+                    </HashLink>
+                </Container>
+            
             <Container2>
                 <HashLink to="#men"> 
+                <img src={MenCard}/>
                 <Image2 src={props.card_image_mbb}/>
                 <ArticleInfo>
                 </ArticleInfo>
-                {/* <Logo2>
-                B
-                R
-                U
-                I
-                N
-                S
-                </Logo2> */}
                 </HashLink>
             </Container2>
+            
             </Grid>
         </OuterContainer>
     )
