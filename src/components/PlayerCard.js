@@ -26,7 +26,6 @@ export default function PlayerCard(props){
         display: grid;
         grid-template-columns: 1fr 1fr;
         column-gap: 1em;
-        /* column-gap: 1em; */
         justify-content: center;
         align-items: center;
         box-sizing: border-box;
@@ -47,44 +46,41 @@ export default function PlayerCard(props){
         display: flex;
         justify-content: center;
         width: 100%;
-        height: 70em;
+        /* height: 70em; */
         border-radius: 0.625em;
         font-family: 'Faster One', sans-serif;
         box-sizing: border-box;
-        position: relative;
-        /* background-image: url(${WomenCard}); */
-        /* background-repeat: no-repeat; */
+        position: relative;/
 
         ${mediaQueries.mobile} {
-            background-image: url(${WomenCard});
-            background-size: 100%;
-            height: 30em;
+            height: 10em;
         }
 
         img {
             display: block;
             text-align: center;
             margin: auto;
+            box-sizing: border-box;
+
+            ${mediaQueries.mobile} {
+                max-width: 100%;
+                max-height: 100%;
+            }
         }
     `
 
     const Container2 = styled.div`
         display: flex;
         width: 100%;
-        height: 70em;
+        /* height: 70em; */
         border-radius: 0.625em;
         font-family: 'Faster One', sans-serif;
-        /* text-align: left; */
-        /* box-sizing: border-box; */
         position: relative;
         margin-top: 1.2em;
-        /* background-image: url(${MenCard}); */
-        /* background-repeat: no-repeat; */
         justify-content: center;
+        box-sizing: border-box;
 
         ${mediaQueries.mobile} {
-            background-image: url(${MenCard});
-            background-size: 100%;
             height: 30em;
         }
         
@@ -92,19 +88,62 @@ export default function PlayerCard(props){
             display: block;
             text-align: center;
             margin: auto;
+            box-sizing: border-box;
+
+            ${mediaQueries.mobile} {
+                max-width: 100%;
+                max-height: 100%;
+                margin-left: 2em;
+            }
         }
     `
 
-    // const InnerContainer1 = styled.div`
-    //     background-image: url(${WomenCard});
-    //     background-repeat: no-repeat;
-    // `
 
-    // const InnerContainer2 = styled.div`
-    //     background-image: url(${MenCard});
-    //     background-repeat: no-repeat;
-    // `
+    const Image1 = styled.img`
+        display: block;
+        position: absolute;
+        max-width: 90%;
+        max-height: 280px;
+        margin: auto;
+        left: 12em;
+        right: 15em;
+        top: 15em;
+        box-sizing: content-box;
+        border-radius: 10px;
 
+        ${mediaQueries.mobile} {
+            position: absolute;
+            box-sizing: border-box;
+            left: 4.5em;
+            top: 6em;
+            height: 130px;
+            width: 170px;
+            margin: auto;
+        }
+    `
+
+    const Image2 = styled.img`
+        display: block;
+        position: absolute;
+        max-width: 100%;
+        max-height: 280px;
+        margin: auto;
+        left: 7em;
+        right: 15em;
+        top: 15em;
+        box-sizing: border-box;
+        border-radius: 10px;
+
+        ${mediaQueries.mobile} {
+            box-sizing: border-box;
+            position: absolute;
+            left: 2em;
+            top: 6em;
+            height: 130px;
+            width: 170px;
+            margin: auto;
+        }
+    `
 
     const ArticleInfo = styled.div`  
         display: none;
@@ -128,49 +167,6 @@ export default function PlayerCard(props){
             height: 75%;
             bottom: 2em;
         }
-    `
-
-
-    const Image1 = styled.img`
-        display: block;
-        position: absolute;
-        max-width: 90%;
-        max-height: 280px;
-        margin: auto;
-        left: 12em;
-        right: 15em;
-        top: 15em;
-        box-sizing: content-box;
-        border-radius: 10px;
-        ${mediaQueries.mobile} {
-            position: absolute;
-            left: 4em;
-            top: 6em;
-            height: 130px;
-            width: 170px;
-            margin: auto;
-        }
-    `
-
-    const Image2 = styled.img`
-    display: block;
-    position: absolute;
-    max-width: 100%;
-    max-height: 280px;
-    margin: auto;
-    left: 7em;
-    right: 15em;
-    top: 15em;
-    box-sizing: content-box;
-    border-radius: 10px;
-    ${mediaQueries.mobile} {
-        position: absolute;
-        left: 2em;
-        top: 6em;
-        height: 130px;
-        width: 170px;
-        margin: auto;
-    }
     `
 
 
