@@ -131,13 +131,13 @@ export default function PlayerCard(props){
         height: 5.5625em;
         left: 8.5em;
         top: 37.5em;
-        ${Container}:hover & {
+        /* ${Container}:hover & {
             display: inline-block;
             background-color: rgba(152, 214, 242, 0.52);
             width: 373px;
             left: 136px;
             top: 625px;
-        }
+        } */
         ${mediaQueries.mobile} {
             display: inline-block;
             height: 75%;
@@ -148,9 +148,9 @@ export default function PlayerCard(props){
 
     const Image1 = styled.img`
         display: block;
-        position: absolute;
-        max-width: 80%;
-        max-height: 275px;
+        position: relative;
+        max-width: 90%;
+        max-height: 280px;
         margin: auto;
         left: 11em;
         right: 15em;
@@ -169,9 +169,9 @@ export default function PlayerCard(props){
 
     const Image2 = styled.img`
     display: block;
-    position: absolute;
-    max-width: 80%;
-    max-height: 275px;
+    position: relative;
+    max-width: 100%;
+    max-height: 280px;
     margin: auto;
     left: 7em;
     right: 15em;
