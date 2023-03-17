@@ -1,8 +1,8 @@
 import React from 'react';
 import styled from 'styled-components'
 import {mediaQueries} from '../shared/config';
-import WomenCard from '../images/wbb_new.svg';
-import MenCard from '../images/mbb_new.svg'
+import WomenCard from '../images/wbb_final.svg';
+import MenCard from '../images/mbb_final.svg'
 import { HashLink } from "react-router-hash-link";
 
 /*
@@ -67,6 +67,7 @@ export default function PlayerCard(props){
     text-align: left;
     box-sizing: border-box;
     position: relative;
+    margin-top: 1.2em;
     background-image: url(${MenCard});
     background-repeat: no-repeat;
     ${mediaQueries.mobile} {
@@ -151,8 +152,8 @@ export default function PlayerCard(props){
         max-width: 80%;
         max-height: 275px;
         margin: auto;
-        left: 12em;
-        right: 12em;
+        left: 11em;
+        right: 15em;
         top: 15em;
         box-sizing: content-box;
         border-radius: 10px;
@@ -172,14 +173,14 @@ export default function PlayerCard(props){
     max-width: 80%;
     max-height: 275px;
     margin: auto;
-    left: 10em;
+    left: 7em;
     right: 15em;
     top: 15em;
     box-sizing: content-box;
     border-radius: 10px;
     ${mediaQueries.mobile} {
         position: absolute;
-        left: 4em;
+        left: 2em;
         top: 6em;
         height: 130px;
         width: 170px;
